@@ -237,8 +237,8 @@ func validateChatParams(chatReq *request.ChatCompletionsRequest, wantStream bool
 	if chatReq.Stream != wantStream {
 		return fmt.Errorf(`err: stream should be %v`, wantStream)
 	}
-	if chatReq.Model != wantModel {
-		return fmt.Errorf(`err: model should be %q`, wantModel)
-	}
+	//if chatReq.Model != wantModel {
+	//	return fmt.Errorf(`err: model should be %q`, wantModel)
+	//}
 	return nil
 }
