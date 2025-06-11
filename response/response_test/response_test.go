@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/go-deepseek/deepseek/response"
+	"github.com/CaryQY/deepseek/response"
 	"github.com/stretchr/testify/assert"
 )
 

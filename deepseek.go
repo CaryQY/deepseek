@@ -2,11 +2,12 @@ package deepseek
 
 import (
 	"context"
+	"github.com/CaryQY/deepseek/internal"
 
-	"github.com/go-deepseek/deepseek/client"
-	"github.com/go-deepseek/deepseek/config"
-	"github.com/go-deepseek/deepseek/request"
-	"github.com/go-deepseek/deepseek/response"
+	"github.com/CaryQY/deepseek/client"
+	"github.com/CaryQY/deepseek/config"
+	"github.com/CaryQY/deepseek/request"
+	"github.com/CaryQY/deepseek/response"
 )
 
 const DEFAULT_TIMEOUT_SECONDS = 120
@@ -47,12 +48,17 @@ func NewClient(apiKey string) (Client, error) {
 
 // NewClientWithConfig returns deeseek client with given client config.
 func NewClientWithConfig(config config.Config) (Client, error) {
+	if config.BaseURL == "" {
+		config.BaseURL = internal.BASE_URL
+	}
+
 	return client.NewClient(config)
 }
 
 // NewConfigWithDefaults returns client config with default values.
 func NewConfigWithDefaults() config.Config {
 	config := config.Config{
+		BaseURL:                  internal.BASE_URL,
 		TimeoutSeconds:           DEFAULT_TIMEOUT_SECONDS,
 		DisableRequestValidation: false,
 	}

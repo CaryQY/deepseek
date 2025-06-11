@@ -9,10 +9,10 @@ import (
 	"os"
 	"testing"
 
-	"github.com/go-deepseek/deepseek"
-	"github.com/go-deepseek/deepseek/config"
-	"github.com/go-deepseek/deepseek/request"
-	"github.com/go-deepseek/deepseek/response"
+	"github.com/CaryQY/deepseek"
+	"github.com/CaryQY/deepseek/config"
+	"github.com/CaryQY/deepseek/request"
+	"github.com/CaryQY/deepseek/response"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

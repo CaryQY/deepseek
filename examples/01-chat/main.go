@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/go-deepseek/deepseek"
-	"github.com/go-deepseek/deepseek/request"
+	"github.com/CaryQY/deepseek"
+	"github.com/CaryQY/deepseek/request"
 )
 
 func main() {

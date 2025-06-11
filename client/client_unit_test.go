@@ -3,7 +3,7 @@ package client
 import (
 	"testing"
 
-	"github.com/go-deepseek/deepseek/request"
+	"github.com/CaryQY/deepseek/request"
 	"github.com/stretchr/testify/assert"
 )
 

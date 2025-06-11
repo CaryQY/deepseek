@@ -1,4 +1,4 @@
-module github.com/go-deepseek/deepseek
+module github.com/CaryQY/deepseek
 
 go 1.23.4
 
