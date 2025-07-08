@@ -186,6 +186,9 @@ func (c *Client) PingChatCompletions(ctx context.Context, inputMessage string) (
 
 func (c *Client) do(ctx context.Context, chatReq *request.ChatCompletionsRequest) (io.ReadCloser, error) {
 	url := fmt.Sprintf(`%s/chat/completions`, c.Config.BaseURL)
+	if c.Config.FullURL != "" {
+		url = c.Config.FullURL
+	}
 
 	in := new(bytes.Buffer)
 	err := json.NewEncoder(in).Encode(chatReq)
